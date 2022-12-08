@@ -1,0 +1,157 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+header {
+  background-color: black;
+  padding: 1rem;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+header nav img {
+  width: 300px;
+}
+
+header nav #cancel {
+  z-index: 2;
+  color: red;
+}
+
+header nav .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .search #search-input {
+  margin-left: 1rem;
+  background-color: #000000;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+header .hamburger-left {
+  padding: 0 2rem;
+  width: 350px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header .hamburger-left ul li {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+header .hamburger-left ul li a {
+  color: #fff;
+}
+
+header .brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-left: 1px solid red;
+  position: fixed;
+  top: 0;
+  left: 350px;
+}
+
+header .brands ul li {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+header .brands ul li a {
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
