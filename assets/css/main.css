@@ -17,8 +17,8 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -41,7 +41,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -63,53 +63,42 @@ a {
 }
 
 .d-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 
 header {
   background-color: black;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
 }
-
 header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   color: #fff;
   font-size: 1.5rem;
   padding: 0 1rem;
 }
-
 header nav img {
   width: 300px;
 }
-
 header nav #cancel {
   z-index: 2;
   color: red;
 }
-
 header nav .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header nav .search #search-input {
   margin-left: 1rem;
   background-color: #000000;
   border: none;
   border-bottom: 1px solid #fff;
 }
-
 header .hamburger-left {
   padding: 0 2rem;
   width: 350px;
@@ -119,23 +108,16 @@ header .hamburger-left {
   top: 0;
   left: 0;
 }
-
 header .hamburger-left ul li {
   margin-bottom: 2rem;
   font-size: 1rem;
 }
-
 header .hamburger-left ul li a {
   color: #fff;
 }
-
 header .brands {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0 2rem;
   width: 300px;
   height: 100vh;
@@ -145,13 +127,280 @@ header .brands {
   top: 0;
   left: 350px;
 }
-
 header .brands ul li {
   margin-bottom: 2rem;
   font-size: 1rem;
 }
-
 header .brands ul li a {
   color: #fff;
 }
-/*# sourceMappingURL=main.css.map */
+
+@media only screen and (max-width: 600px) {
+  header nav img {
+    width: 150px;
+  }
+  header nav .search #search-input {
+    display: none !important;
+  }
+  header .brands {
+    display: none !important;
+  }
+}
+.entry-image {
+  width: 100%;
+  height: 90vh;
+  background-image: url("https://www.coca-cola.az/content/dam/one/az/az/homepage-images/new-coca-cola-slogan-section-homepage-desktop-1600.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.entry-image a {
+  font-size: 3rem;
+  color: #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+  .entry-image {
+    height: 60vh;
+    background-image: url("https://www.coca-cola.az/content/dam/one/az/az/homepage-images/new-coca-cola-slogan_carousel_mobile-600x900.jpg");
+  }
+}
+#main-images {
+  display: flex;
+  flex-direction: column;
+}
+#main-images a {
+  overflow: hidden;
+}
+#main-images a img {
+  transition: 1.5s;
+}
+#main-images a:hover img {
+  transform: scale(1.1);
+}
+#main-images .first-row {
+  display: flex;
+}
+#main-images .first-row .brands-img {
+  width: 60%;
+}
+#main-images .first-row .brands-img img {
+  width: 100%;
+  height: 100%;
+}
+#main-images .first-row-down {
+  display: flex;
+  flex-direction: column;
+}
+#main-images .first-row-down a {
+  width: 100%;
+  height: 50%;
+}
+#main-images .first-row-down a img {
+  width: 100%;
+  height: 100%;
+}
+#main-images .second-row {
+  display: flex;
+}
+#main-images .second-row a {
+  width: 33.3%;
+}
+#main-images .second-row a img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  #main-images .first-row {
+    flex-direction: column;
+  }
+  #main-images .first-row .brands-img {
+    width: 100%;
+  }
+  #main-images .second-row {
+    flex-direction: column;
+  }
+  #main-images .second-row a {
+    width: 100%;
+  }
+  #main-images .second-row a img {
+    height: 150px;
+  }
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 3px solid red;
+}
+
+.compact-list {
+  padding: 2rem 0;
+}
+.compact-list__head {
+  padding-top: 1rem;
+  border-bottom: 3px solid #ddd;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.compact-list__head ul {
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+.compact-list__head ul li {
+  margin: 0 2rem;
+  font-size: 1.5rem;
+  color: #000000;
+}
+.compact-list__head ul li:hover {
+  cursor: pointer;
+  color: red;
+}
+.compact-list__head i {
+  position: absolute;
+  right: -150px;
+  top: 25px;
+  background-color: #000000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+.compact-list__body .follow-us {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.compact-list__body .follow-us ul {
+  display: flex;
+}
+.compact-list__body .follow-us ul li {
+  margin: 2rem;
+}
+.compact-list__body .follow-us ul li a {
+  color: #ddd;
+  font-size: 3rem;
+  border: 3px solid #ddd;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+}
+.compact-list__body .cl-brands {
+  display: flex;
+  justify-content: space-between;
+}
+.compact-list__body .cl-brands img {
+  width: 20%;
+}
+.compact-list__body .explore-world {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.compact-list__body .explore-world ul {
+  display: flex;
+}
+.compact-list__body .explore-world ul li {
+  margin: 2rem;
+}
+.compact-list__body .explore-world ul li a {
+  color: #ddd;
+  font-size: 3rem;
+  border: 3px solid #ddd;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .compact-list__head i {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+  .compact-list {
+    padding: 1rem 0;
+  }
+  .compact-list__head ul {
+    flex-direction: column;
+  }
+  .compact-list__head ul li {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .compact-list__head i {
+    right: 0;
+    top: 10px;
+    padding: 0.25rem 0.5rem;
+  }
+  .compact-list__body .follow-us ul li {
+    margin: 0.5rem;
+  }
+  .compact-list__body .follow-us ul li a {
+    color: #ddd;
+    font-size: 1rem;
+    border: 3px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+  }
+  .compact-list__body .explore-world ul li {
+    margin: 0.5rem;
+  }
+  .compact-list__body .explore-world ul li a {
+    color: #ddd;
+    font-size: 1rem;
+    border: 3px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+  }
+}
+footer {
+  padding: 1rem;
+  background-color: #000000;
+  color: #fff;
+}
+footer .footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+footer .footer-logo a img {
+  width: 300px;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-content .footer-left {
+  display: flex;
+}
+footer .footer-content .footer-left span {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-content .footer-left {
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */

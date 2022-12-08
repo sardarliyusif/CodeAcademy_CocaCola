@@ -13,6 +13,11 @@
 header{
     background-color: black;
     padding: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
     nav{
         display: flex;
         align-items: center;
@@ -52,9 +57,6 @@ header{
                 a{
                     color: #fff;
                 }
-                .plus-icon{
-                    
-                }
             }
         }
     }
@@ -79,4 +81,314 @@ header{
             }
         }
     }
+}
+
+@media only screen and (max-width: 600px) {
+    header{
+        nav{
+            img{
+                width: 150px;
+            }
+            .search{
+                #search-input{
+                    display: none !important;
+                }
+            }
+        }
+        
+        .brands{
+            display: none !important;
+        }
+    }
+  }
+
+
+  // ENTRY IMG SECTION
+
+.entry-image{
+    width: 100%;
+    height: 90vh;
+    background-image: url('https://www.coca-cola.az/content/dam/one/az/az/homepage-images/new-coca-cola-slogan-section-homepage-desktop-1600.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    a{
+        font-size: 3rem;
+        
+        color: #ddd;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .entry-image{
+        height: 60vh;
+        background-image: url('https://www.coca-cola.az/content/dam/one/az/az/homepage-images/new-coca-cola-slogan_carousel_mobile-600x900.jpg');
+    }
+  }
+
+// Main IMAGES SECTION
+#main-images{
+    display: flex;
+    flex-direction: column;
+    a{
+        overflow: hidden;
+        img{
+            transition: 1.5s;
+        }
+        &:hover{
+            
+            img{
+                
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .first-row{
+        display: flex;
+        .brands-img{
+            width: 60%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-down{
+            display: flex;
+            flex-direction: column;
+            a{
+                width: 100%;
+                height: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .second-row{
+        display: flex;
+        a{
+            width: 33.3%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    #main-images{
+        .first-row{
+            flex-direction: column;
+            .brands-img{
+                width: 100%;
+                
+            }
+            
+        }
+        .second-row{
+            flex-direction: column;
+            a{
+                width: 100%;
+                img{
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+
+// Compact List Section
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.active{
+    font-weight: 700;
+    border-bottom: 3px solid red;
+}
+.compact-list{
+    padding: 2rem 0;
+    &__head{
+        padding-top: 1rem;
+        border-bottom: 3px solid #ddd;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        ul{
+            display: flex;
+            margin-bottom: 0.25rem;
+            li{
+                margin: 0 2rem;
+                font-size: 1.5rem;
+                color: #000000;
+                &:hover{
+                    cursor: pointer;
+                    color: red;
+                }
+            }
+        }
+        i{
+            position: absolute;
+            right: -150px;
+            top: 25px;
+            background-color: #000000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+        }
+    }
+    &__body{
+        .follow-us{
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            ul{
+                display: flex;
+                li{
+                    margin: 2rem;
+                    a{
+                        color: #ddd;
+                        font-size: 3rem;
+                        border: 3px solid #ddd;
+                        padding: 1rem 2rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        .cl-brands{
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: 20%;
+            }
+        }
+        .explore-world{
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            ul{
+                display: flex;
+                li{
+                    margin: 2rem;
+                    a{
+                        color: #ddd;
+                        font-size: 3rem;
+                        border: 3px solid #ddd;
+                        padding: 1rem 2rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .container{
+        width: 90%;
+    }
+    .compact-list__head i{
+        right: 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 90%;
+    }
+    .compact-list{
+        padding: 1rem 0;
+        &__head{
+            ul{
+                flex-direction: column;
+                li{
+                    font-size: 1rem;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                }
+            }
+            i{
+                right: 0;
+                top: 10px;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+        &__body{
+            .follow-us{
+                ul{
+                    li{
+                        margin: 0.5rem;
+                        a{
+                            color: #ddd;
+                            font-size: 1rem;
+                            border: 3px solid #ddd;
+                            padding: 0.5rem 1rem;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .explore-world{
+                ul{
+                    li{
+                        margin: 0.5rem;
+                        a{
+                            color: #ddd;
+                            font-size: 1rem;
+                            border: 3px solid #ddd;
+                            padding: 0.5rem 1rem;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer
+footer{
+    padding: 1rem;
+    background-color: #000000;
+    color: #fff;
+    .footer-logo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        a{
+            img{
+                width: 300px;
+            }
+        }
+    }
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        .footer-left{
+            display: flex;
+            span{
+                margin-left: 1rem;
+                padding-left: 1rem;
+                border-left: 2px solid #fff;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    footer{
+        font-size: 0.75rem;
+        text-align: center;
+        .footer-content{
+            flex-direction: column;
+            align-items: center;
+            .footer-left{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    
 }
